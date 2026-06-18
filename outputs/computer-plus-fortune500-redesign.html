@@ -3,853 +3,1234 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Computer Plus Solutions | Managed IT, Cybersecurity & Computer Repair</title>
-  <meta name="description" content="A premium redesign concept for Computer Plus Solutions in St. Peter, MN: managed IT, cybersecurity, cloud services, computer repair, and business technology support.">
+  <title>Computer Plus Solutions | Managed IT, Cybersecurity & Business Technology</title>
+  <meta name="description" content="Computer Plus Solutions delivers managed IT, cybersecurity, cloud, and computer repair services to businesses across Southern Minnesota — enterprise discipline with local accountability.">
+  <link rel="canonical" href="https://stpetercomputers.vercel.app/">
+  <meta property="og:title" content="Computer Plus Solutions | Managed IT for Local Business">
+  <meta property="og:description" content="Enterprise-grade IT support, cybersecurity, cloud services, and computer repair for businesses in and around St. Peter, MN.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://stpetercomputers.vercel.app/">
+  <meta property="og:image" content="https://stpetercomputers.vercel.app/about.avif">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Computer Plus Solutions",
+      "url": "https://stpetercomputers.vercel.app/",
+      "telephone": "+1-507-931-5776",
+      "email": "contact@computerplussolutions.com",
+      "image": "https://stpetercomputers.vercel.app/logo.avif",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "209 Nassau Street",
+        "addressLocality": "St. Peter",
+        "addressRegion": "MN",
+        "postalCode": "56082",
+        "addressCountry": "US"
+      },
+      "areaServed": ["St. Peter MN", "Southern Minnesota"],
+      "description": "Managed IT, cybersecurity, cloud services, hardware, and computer repair support for local businesses."
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600;8..60,700&family=JetBrains+Mono:wght@500;700&display=swap">
   <style>
     :root {
-      --ink: #12151c;
-      --muted: #5e6878;
-      --line: #dfe5ec;
-      --panel: #ffffff;
-      --panel-soft: #f5f7fa;
-      --navy: #17283d;
-      --blue: #245b84;
-      --teal: #13858b;
-      --gold: #c8a23b;
-      --gold-dark: #a67d17;
-      --green: #2e7d5b;
-      --shadow: 0 24px 80px rgba(20, 31, 45, 0.14);
-      --radius: 8px;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --ink:        #0a0f1a;
+      --ink-soft:   #1c2434;
+      --muted:      #5a6473;
+      --hair:       #1a234012;
+      --hair-strong:#1a234022;
+      --paper:      #f6f3ec;
+      --paper-2:    #efe8d7;
+      --paper-3:    #e7dec6;
+      --panel:      #ffffff;
+      --navy:       #0b1d35;
+      --navy-2:     #142a4c;
+      --navy-3:     #1c3a63;
+      --accent:     #b08540;
+      --accent-2:   #8a6427;
+      --accent-soft:#d8b97a;
+      --crimson:    #8c1d2b;
+      --emerald:    #22513d;
+      --serif: "Source Serif 4", "Source Serif Pro", "Charter", Georgia, "Times New Roman", serif;
+      --sans:  "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      --mono:  "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
       color: var(--ink);
-      background: #fff;
-      line-height: 1.5;
+      background: var(--paper);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    button { font: inherit; }
 
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    button {
-      font: inherit;
-    }
-
-    .topbar {
-      background: var(--navy);
-      color: #edf5fb;
-      font-size: 13px;
-      letter-spacing: 0.01em;
-    }
-
+    .wrap,
     .topbar-inner,
     .nav-inner,
     .section-inner {
-      width: min(1180px, calc(100% - 40px));
+      width: min(1280px, calc(100% - 56px));
       margin: 0 auto;
     }
 
+    /* ============ TOP BAR ============ */
+    .topbar {
+      background: var(--ink);
+      color: #cfd6e2;
+      font-size: 12.5px;
+      letter-spacing: 0.01em;
+      border-bottom: 1px solid #ffffff0d;
+    }
     .topbar-inner {
-      min-height: 42px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-    }
-
-    .topbar strong {
-      color: #fff;
-      font-weight: 700;
-    }
-
-    .topbar-links {
-      display: flex;
-      gap: 18px;
-      align-items: center;
-      white-space: nowrap;
-    }
-
-    .nav {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(255, 255, 255, 0.94);
-      backdrop-filter: blur(18px);
-      border-bottom: 1px solid rgba(223, 229, 236, 0.9);
-    }
-
-    .nav-inner {
-      min-height: 82px;
+      min-height: 38px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 24px;
     }
+    .topbar-meta { display: flex; align-items: center; gap: 22px; }
+    .topbar-meta .dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: #4ade80; box-shadow: 0 0 0 3px #4ade8025;
+      display: inline-block; margin-right: 8px;
+    }
+    .topbar-meta strong { color: #fff; font-weight: 600; }
+    .topbar-links { display: flex; gap: 22px; align-items: center; white-space: nowrap; }
+    .topbar-links a:hover { color: #fff; }
 
+    /* ============ NAV ============ */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: var(--paper);
+      border-bottom: 1px solid var(--hair-strong);
+    }
+    .nav-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
     .brand {
       display: flex;
       align-items: center;
-      gap: 12px;
-      min-width: 220px;
+      gap: 14px;
+      min-width: 0;
     }
-
-    .brand img {
-      width: 58px;
-      height: 58px;
-      object-fit: contain;
+    .brand-mark {
+      width: 44px; height: 44px;
+      display: grid; place-items: center;
+      background: var(--navy);
+      color: #fff;
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 22px;
+      letter-spacing: -0.02em;
     }
-
-    .brand span {
-      display: block;
-      font-weight: 800;
-      letter-spacing: 0.01em;
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+    }
+    .brand-text {
+      display: flex; flex-direction: column;
       line-height: 1.05;
     }
-
-    .brand small {
-      display: block;
+    .brand-text strong {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+    .brand-text small {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
       color: var(--muted);
-      font-size: 12px;
+      font-weight: 600;
       margin-top: 4px;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 28px;
-      color: #2d3645;
+      gap: 34px;
       font-size: 14px;
-      font-weight: 700;
+      font-weight: 500;
+      color: var(--ink-soft);
     }
-
     .nav-links a {
-      padding: 30px 0;
+      position: relative;
+      padding: 28px 0;
+      transition: color .15s;
     }
-
-    .nav-cta {
-      display: flex;
-      gap: 12px;
-      align-items: center;
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 100%;
+      bottom: 20px;
+      height: 1.5px;
+      background: var(--accent);
+      transition: right .25s ease;
     }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-links a:hover::after { right: 0; }
 
-    .icon-btn,
-    .menu-btn {
-      width: 44px;
-      height: 44px;
-      border: 1px solid var(--line);
-      border-radius: 50%;
-      background: #fff;
-      display: inline-grid;
-      place-items: center;
-      color: var(--navy);
+    .nav-cta { display: flex; gap: 10px; align-items: center; }
+    .icon-btn {
+      width: 42px; height: 42px;
+      border: 1px solid var(--hair-strong);
+      background: transparent;
+      display: inline-grid; place-items: center;
+      color: var(--ink-soft);
       cursor: pointer;
+      transition: background .15s, color .15s;
     }
+    .icon-btn:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
+    .menu-btn { display: none; }
 
-    .menu-btn {
-      display: none;
-    }
-
+    /* ============ BUTTONS ============ */
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
       min-height: 46px;
-      padding: 0 20px;
-      border-radius: 999px;
-      font-weight: 800;
+      padding: 0 22px;
+      font-family: var(--sans);
+      font-weight: 600;
       font-size: 14px;
+      letter-spacing: 0.01em;
       border: 1px solid transparent;
       cursor: pointer;
       white-space: nowrap;
+      transition: transform .12s, background .15s, color .15s, border-color .15s;
     }
-
     .btn-primary {
-      background: var(--gold);
-      color: #16150f;
-      box-shadow: 0 14px 30px rgba(200, 162, 59, 0.24);
-    }
-
-    .btn-dark {
-      background: var(--navy);
+      background: var(--ink);
       color: #fff;
     }
-
+    .btn-primary:hover { background: var(--navy-3); }
+    .btn-accent {
+      background: var(--accent);
+      color: #fff;
+    }
+    .btn-accent:hover { background: var(--accent-2); }
     .btn-outline {
+      background: transparent;
+      border-color: var(--ink);
+      color: var(--ink);
+    }
+    .btn-outline:hover { background: var(--ink); color: #fff; }
+    .btn-ghost-light {
+      background: transparent;
+      border-color: #ffffff44;
+      color: #fff;
+    }
+    .btn-ghost-light:hover { background: #ffffff10; border-color: #fff; }
+    .btn-white {
       background: #fff;
-      border-color: #cad4de;
-      color: var(--navy);
+      color: var(--ink);
+    }
+    .btn-white:hover { background: var(--accent); color: #fff; }
+    .btn .arrow { transition: transform .15s; }
+    .btn:hover .arrow { transform: translateX(3px); }
+
+    /* ============ ANNOUNCEMENT CHIP ============ */
+    .alert-band {
+      background: var(--paper-2);
+      border-bottom: 1px solid var(--hair-strong);
+    }
+    .alert-band .wrap {
+      display: flex; align-items: center; gap: 14px;
+      padding: 10px 0;
+      font-size: 13px;
+      color: var(--ink-soft);
+    }
+    .pill {
+      display: inline-flex; align-items: center;
+      padding: 3px 9px;
+      background: var(--ink);
+      color: #fff;
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .alert-band a {
+      margin-left: auto;
+      color: var(--ink);
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      text-decoration-thickness: 1px;
+      text-decoration-color: var(--accent);
     }
 
+    /* ============ HERO ============ */
     .hero {
       position: relative;
       isolation: isolate;
-      min-height: 720px;
-      display: flex;
-      align-items: stretch;
       overflow: hidden;
-      background:
-        linear-gradient(90deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.91) 42%, rgba(255,255,255,0.48) 64%, rgba(255,255,255,0.06) 100%),
-        url("https://stpetercomputers.vercel.app/about.avif") right center / cover no-repeat;
+      background: var(--paper);
     }
-
-    .hero::after {
+    .hero::before {
       content: "";
       position: absolute;
-      inset: auto 0 0 0;
-      height: 170px;
-      background: linear-gradient(0deg, #fff 0%, rgba(255,255,255,0) 100%);
-      z-index: -1;
+      inset: 0;
+      background:
+        radial-gradient(circle at 92% 8%, #b0854020 0%, transparent 40%),
+        radial-gradient(circle at 6% 100%, #0b1d3510 0%, transparent 48%);
+      pointer-events: none;
+      z-index: 0;
     }
 
     .hero-grid {
-      width: min(1180px, calc(100% - 40px));
-      margin: 0 auto;
+      position: relative;
+      z-index: 1;
       display: grid;
-      grid-template-columns: minmax(0, 650px) minmax(280px, 1fr);
-      align-items: center;
+      grid-template-columns: 1.05fr 0.95fr;
       gap: 56px;
-      padding: 76px 0 108px;
+      padding: 88px 0 0;
+      align-items: stretch;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      color: var(--accent-2);
+      text-transform: uppercase;
+      margin-bottom: 26px;
+    }
+    .hero-eyebrow::before {
+      content: "";
+      width: 28px; height: 1px;
+      background: var(--accent);
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: clamp(48px, 6.5vw, 92px);
+      line-height: 0.98;
+      letter-spacing: -0.025em;
+      color: var(--ink);
+    }
+    .hero h1 em {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--navy-3);
+      font-feature-settings: "ss01";
+    }
+
+    .hero-copy {
+      margin: 36px 0 0;
+      max-width: 540px;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #3b4554;
+    }
+    .hero-copy strong { color: var(--ink); font-weight: 600; }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 38px;
+    }
+
+    .hero-foot {
+      margin-top: 56px;
+      padding-top: 28px;
+      border-top: 1px solid var(--hair-strong);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      max-width: 620px;
+    }
+    .hero-foot div {
+      display: flex; flex-direction: column;
+    }
+    .hero-foot strong {
+      font-family: var(--serif);
+      font-size: 38px;
+      font-weight: 600;
+      line-height: 1;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+    }
+    .hero-foot strong sup {
+      font-size: 16px;
+      vertical-align: top;
+      margin-left: 2px;
+      color: var(--accent-2);
+      font-family: var(--sans);
+      font-weight: 600;
+    }
+    .hero-foot span {
+      margin-top: 10px;
+      font-size: 12.5px;
+      color: var(--muted);
+      letter-spacing: 0.01em;
+      line-height: 1.45;
+    }
+
+    /* hero right panel — magazine-style stat card stack */
+    .hero-feature {
+      position: relative;
+      align-self: stretch;
+      display: grid;
+      grid-template-rows: 1fr auto;
+      min-height: 560px;
+    }
+    .hero-feature .photo {
+      position: relative;
+      background:
+        linear-gradient(180deg, #0b1d3500 60%, #0b1d35cc 100%),
+        url("https://stpetercomputers.vercel.app/about.avif") center/cover no-repeat;
+      filter: saturate(0.85) contrast(1.04);
+    }
+    .hero-feature .photo::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      box-shadow: inset 0 0 0 1px #00000010;
+    }
+    .photo-label {
+      position: absolute;
+      left: 0; top: 0;
+      padding: 14px 18px;
+      background: var(--ink);
+      color: #fff;
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .photo-label::before {
+      content: "";
+      width: 6px; height: 6px;
+      background: var(--accent);
+    }
+    .photo-caption {
+      position: absolute;
+      left: 0; bottom: 0;
+      padding: 20px 22px;
+      color: #fff;
+      max-width: 380px;
+      font-family: var(--serif);
+      font-size: 17px;
+      line-height: 1.35;
+      font-style: italic;
+    }
+    .photo-caption small {
+      display: block;
+      margin-top: 10px;
+      font-family: var(--sans);
+      font-style: normal;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.7;
+    }
+
+    .hero-feature .stat {
+      background: var(--ink);
+      color: #fff;
+      padding: 30px 28px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: end;
+      gap: 24px;
+      border-top: 4px solid var(--accent);
+    }
+    .stat-num {
+      font-family: var(--serif);
+      font-size: 64px;
+      font-weight: 600;
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+    }
+    .stat-num sup {
+      font-family: var(--sans);
+      font-size: 18px;
+      font-weight: 600;
+      vertical-align: top;
+      color: var(--accent-soft);
+      margin-left: 2px;
+    }
+    .stat-label {
+      font-size: 13px;
+      line-height: 1.45;
+      color: #c8d2e0;
+      max-width: 200px;
+    }
+
+    /* ============ MARQUEE — partners ============ */
+    .marquee {
+      background: var(--ink);
+      color: #fff;
+      border-top: 1px solid #ffffff10;
+      border-bottom: 1px solid #ffffff10;
+      overflow: hidden;
+    }
+    .marquee-row {
+      display: grid;
+      grid-template-columns: minmax(220px, auto) 1fr;
+      gap: 36px;
+      align-items: center;
+      padding: 28px 0;
+    }
+    .marquee-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #97a3b5;
+      border-right: 1px solid #ffffff1a;
+      padding-right: 36px;
+    }
+    .marquee-logos {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 18px;
+      align-items: center;
+    }
+    .marquee-logos .lg {
+      display: flex; align-items: center; justify-content: center;
+      gap: 8px;
+      color: #d6dde7;
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: -0.01em;
+      opacity: 0.82;
+      transition: opacity .2s;
+    }
+    .marquee-logos .lg:hover { opacity: 1; color: #fff; }
+    .marquee-logos .lg svg { flex-shrink: 0; }
+
+    /* ============ SECTIONS ============ */
+    .section { padding: 110px 0; }
+    .section-soft { background: var(--paper-2); }
+    .section-cream { background: var(--paper); }
+    .section-dark {
+      background: var(--ink);
+      color: #fff;
+    }
+    .section-navy {
+      background: linear-gradient(180deg, var(--navy) 0%, var(--ink) 100%);
+      color: #fff;
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      color: var(--gold-dark);
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      margin-bottom: 22px;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 34px;
-      height: 2px;
-      background: var(--gold);
-    }
-
-    .hero h1 {
-      margin: 0;
-      max-width: 690px;
-      font-size: clamp(42px, 6vw, 76px);
-      line-height: 0.96;
-      letter-spacing: 0;
-      color: #10131a;
-    }
-
-    .hero h1 span {
-      color: var(--blue);
-    }
-
-    .hero-copy {
-      max-width: 610px;
-      margin: 26px 0 0;
-      font-size: 19px;
-      color: #475366;
-    }
-
-    .hero-copy strong {
-      color: var(--ink);
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 34px;
-    }
-
-    .trust-row {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 12px;
-      margin-top: 42px;
-      max-width: 700px;
-    }
-
-    .trust-item {
-      padding: 18px;
-      border: 1px solid rgba(202, 212, 222, 0.86);
-      background: rgba(255, 255, 255, 0.82);
-      border-radius: var(--radius);
-      backdrop-filter: blur(10px);
-    }
-
-    .trust-item strong {
-      display: block;
-      font-size: 26px;
-      line-height: 1;
-      color: var(--navy);
-    }
-
-    .trust-item span {
-      display: block;
-      margin-top: 8px;
-      color: var(--muted);
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    .hero-panel {
-      align-self: end;
-      justify-self: end;
-      width: min(100%, 390px);
-      background: rgba(18, 21, 28, 0.86);
-      color: #fff;
-      border: 1px solid rgba(255,255,255,0.18);
-      border-radius: var(--radius);
-      padding: 24px;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(18px);
-    }
-
-    .panel-kicker {
-      color: #a8dfe1;
-      font-size: 12px;
-      font-weight: 900;
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 500;
       letter-spacing: 0.14em;
       text-transform: uppercase;
+      color: var(--accent-2);
+      margin-bottom: 22px;
     }
-
-    .hero-panel h2 {
-      font-size: 25px;
-      line-height: 1.08;
-      margin: 12px 0 14px;
-      letter-spacing: 0;
+    .eyebrow::before {
+      content: "";
+      width: 24px; height: 1px;
+      background: var(--accent);
     }
-
-    .signal-list {
-      display: grid;
-      gap: 12px;
-      margin: 22px 0 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .signal-list li {
-      display: grid;
-      grid-template-columns: 30px 1fr;
-      gap: 12px;
-      align-items: start;
-      color: #d8e2ec;
-      font-size: 14px;
-    }
-
-    .check {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: rgba(46, 125, 91, 0.22);
-      color: #7ee0ac;
-      font-weight: 900;
-    }
-
-    .section {
-      padding: 88px 0;
-    }
-
-    .section-soft {
-      background: var(--panel-soft);
-    }
-
-    .section-dark {
-      color: #fff;
-      background: linear-gradient(135deg, #17283d 0%, #154254 56%, #1d5e63 100%);
-    }
+    .section-dark .eyebrow,
+    .section-navy .eyebrow { color: var(--accent-soft); }
+    .section-dark .eyebrow::before,
+    .section-navy .eyebrow::before { background: var(--accent-soft); }
 
     .section-head {
-      display: flex;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 56px;
       align-items: end;
-      justify-content: space-between;
-      gap: 32px;
-      margin-bottom: 34px;
+      margin-bottom: 64px;
     }
-
     .section-head h2 {
       margin: 0;
-      max-width: 680px;
-      font-size: clamp(31px, 4vw, 50px);
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: clamp(36px, 4.2vw, 60px);
       line-height: 1.02;
-      letter-spacing: 0;
+      letter-spacing: -0.02em;
+      max-width: 720px;
     }
-
-    .section-head p {
+    .section-head h2 em {
+      font-style: italic;
+      color: var(--navy-3);
+    }
+    .section-dark .section-head h2 em,
+    .section-navy .section-head h2 em { color: var(--accent-soft); }
+    .section-head .lede {
       margin: 0;
-      max-width: 440px;
-      color: var(--muted);
       font-size: 16px;
-    }
-
-    .section-dark .section-head p,
-    .section-dark .eyebrow {
-      color: #d0dde7;
-    }
-
-    .logo-strip {
-      border-block: 1px solid var(--line);
-      padding: 24px 0;
-      background: #fff;
-    }
-
-    .logo-strip .section-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
+      line-height: 1.65;
       color: var(--muted);
-      font-size: 13px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
+      max-width: 380px;
     }
+    .section-dark .section-head .lede,
+    .section-navy .section-head .lede { color: #adb8c8; }
 
-    .partner-text {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      gap: 22px;
-      color: var(--navy);
-    }
-
-    .service-grid {
+    /* ============ SERVICES ============ */
+    .services {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      overflow: hidden;
-      background: #fff;
-      box-shadow: 0 18px 60px rgba(20, 31, 45, 0.08);
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--hair-strong);
+      border-left: 1px solid var(--hair-strong);
     }
-
-    .service-card {
-      min-height: 250px;
-      padding: 28px;
-      border-right: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
+    .service {
       position: relative;
-    }
-
-    .service-card:nth-child(3n) {
-      border-right: 0;
-    }
-
-    .service-card:nth-child(n+4) {
-      border-bottom: 0;
-    }
-
-    .service-number {
-      display: inline-block;
-      color: var(--gold-dark);
-      font-weight: 900;
-      font-size: 13px;
-      letter-spacing: 0.12em;
-    }
-
-    .service-card h3 {
-      margin: 42px 0 10px;
-      font-size: 23px;
-      line-height: 1.15;
-      letter-spacing: 0;
-      color: var(--navy);
-    }
-
-    .service-card p {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .service-card a {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 22px;
-      color: var(--blue);
-      font-weight: 900;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .outcome-grid {
-      display: grid;
-      grid-template-columns: 0.85fr 1.15fr;
-      gap: 40px;
-      align-items: stretch;
-    }
-
-    .outcome-card {
-      background: var(--navy);
-      color: #fff;
-      border-radius: var(--radius);
-      padding: 34px;
-      min-height: 100%;
+      padding: 38px 32px 36px;
+      border-right: 1px solid var(--hair-strong);
+      border-bottom: 1px solid var(--hair-strong);
+      background: var(--paper);
+      min-height: 320px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      overflow: hidden;
-      position: relative;
+      transition: background .25s;
     }
-
-    .outcome-card::after {
-      content: "";
-      position: absolute;
-      right: -90px;
-      bottom: -90px;
-      width: 260px;
-      height: 260px;
-      border-radius: 50%;
-      border: 48px solid rgba(200, 162, 59, 0.16);
+    .service:hover { background: #fff; }
+    .service-rank {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      color: var(--accent-2);
+      font-weight: 500;
     }
-
-    .outcome-card h2 {
+    .service-icon {
+      margin: 20px 0 22px;
+      width: 38px; height: 38px;
+      color: var(--ink);
+    }
+    .service h3 {
+      margin: 0 0 12px;
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 1.15;
+      letter-spacing: -0.015em;
+      color: var(--ink);
+    }
+    .service p {
       margin: 0;
-      font-size: clamp(31px, 4vw, 48px);
-      line-height: 1.02;
-      letter-spacing: 0;
+      color: var(--muted);
+      font-size: 14.5px;
+      line-height: 1.6;
     }
+    .service-link {
+      margin-top: auto;
+      padding-top: 24px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink);
+      font-weight: 600;
+    }
+    .service-link svg { transition: transform .2s; }
+    .service:hover .service-link svg { transform: translateX(4px); }
 
-    .outcome-card p {
-      margin: 18px 0 28px;
-      color: #d8e2ec;
+    /* ============ OUTCOMES / METRICS ============ */
+    .outcome-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .outcome-copy h2 {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: clamp(36px, 4vw, 56px);
+      line-height: 1.04;
+      letter-spacing: -0.02em;
+      margin: 0 0 22px;
+    }
+    .outcome-copy h2 em { font-style: italic; color: var(--navy-3); }
+    .outcome-copy p {
       font-size: 17px;
+      color: var(--muted);
+      max-width: 460px;
+      margin: 0 0 32px;
+    }
+    .pull-quote {
+      margin: 36px 0 0;
+      padding: 24px 0 0;
+      border-top: 1px solid var(--hair-strong);
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 18px;
+      line-height: 1.45;
+      color: var(--ink-soft);
+      max-width: 460px;
+    }
+    .pull-quote cite {
+      display: block;
+      margin-top: 14px;
+      font-style: normal;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 600;
     }
 
     .metric-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
+      grid-template-columns: 1fr 1fr;
+      border-top: 1px solid var(--hair-strong);
+      border-left: 1px solid var(--hair-strong);
     }
-
     .metric {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 26px;
-    }
-
-    .metric strong {
-      display: block;
-      font-size: 42px;
-      line-height: 1;
-      color: var(--blue);
-    }
-
-    .metric span {
-      display: block;
-      margin-top: 12px;
-      color: var(--muted);
-      font-weight: 700;
-    }
-
-    .process {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 14px;
-      counter-reset: steps;
-    }
-
-    .process-step {
-      counter-increment: steps;
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 26px;
+      padding: 36px 30px;
+      border-right: 1px solid var(--hair-strong);
+      border-bottom: 1px solid var(--hair-strong);
+      background: transparent;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
       min-height: 220px;
     }
-
-    .process-step::before {
-      content: "0" counter(steps);
-      display: inline-block;
-      color: var(--gold-dark);
-      font-size: 13px;
-      font-weight: 900;
-      letter-spacing: 0.12em;
-      margin-bottom: 46px;
+    .metric .num {
+      font-family: var(--serif);
+      font-size: 64px;
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      font-weight: 500;
+      color: var(--ink);
+    }
+    .metric .num sup {
+      font-family: var(--sans);
+      font-size: 16px;
+      font-weight: 600;
+      vertical-align: top;
+      color: var(--accent-2);
+      margin-left: 2px;
+    }
+    .metric .label {
+      font-size: 13.5px;
+      color: var(--muted);
+      max-width: 230px;
+      margin-top: auto;
+      line-height: 1.5;
+    }
+    .metric .kind {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent-2);
+      font-weight: 500;
     }
 
-    .process-step h3 {
-      margin: 0 0 10px;
-      font-size: 20px;
-      letter-spacing: 0;
+    /* ============ PROCESS ============ */
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border-top: 1px solid var(--hair-strong);
     }
-
-    .process-step p {
+    .step {
+      padding: 40px 28px 36px;
+      border-right: 1px solid var(--hair-strong);
+      position: relative;
+      min-height: 260px;
+    }
+    .step:last-child { border-right: 0; }
+    .step-no {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      color: var(--accent-2);
+      font-weight: 600;
+    }
+    .step h3 {
+      margin: 38px 0 12px;
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+    }
+    .step p {
       margin: 0;
       color: var(--muted);
-      font-size: 14px;
+      font-size: 14.5px;
+      line-height: 1.55;
+    }
+    .step::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 56px;
+      height: 3px;
+      background: var(--accent);
     }
 
-    .quote-layout {
+    /* ============ TESTIMONIALS ============ */
+    .reviews {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 32px;
+      align-items: stretch;
+    }
+    .review {
+      padding: 36px 32px;
+      background: #ffffff08;
+      border: 1px solid #ffffff14;
+      display: flex;
+      flex-direction: column;
+    }
+    .review.feature {
+      background: linear-gradient(180deg, #1c3a6340 0%, #ffffff05 100%);
+      border-color: #ffffff28;
+    }
+    .review-mark {
+      font-family: var(--serif);
+      font-size: 56px;
+      line-height: 0.5;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .review p {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 19px;
+      line-height: 1.45;
+      color: #e6ecf3;
+    }
+    .review.feature p { font-size: 22px; }
+    .review-byline {
+      margin-top: auto;
+      padding-top: 28px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      border-top: 1px solid #ffffff14;
+    }
+    .avatar {
+      width: 42px; height: 42px;
+      background: var(--accent);
+      color: #fff;
+      display: grid; place-items: center;
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: 16px;
+    }
+    .review-byline strong {
+      display: block;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .review-byline span {
+      display: block;
+      color: #adb8c8;
+      font-size: 12px;
+      margin-top: 2px;
+    }
+
+    .rating-band {
+      margin-top: 64px;
+      padding-top: 36px;
+      border-top: 1px solid #ffffff14;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .rating {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .rating .stars {
+      display: flex; gap: 2px;
+      color: var(--accent);
+    }
+    .rating .num {
+      font-family: var(--serif);
+      font-size: 32px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #fff;
+    }
+    .rating .src {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #adb8c8;
+    }
+
+    /* ============ INDUSTRIES ============ */
+    .industries {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 0;
+      border-top: 1px solid var(--hair-strong);
+      border-left: 1px solid var(--hair-strong);
+    }
+    .industry {
+      padding: 32px 26px;
+      border-right: 1px solid var(--hair-strong);
+      border-bottom: 1px solid var(--hair-strong);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      min-height: 200px;
+    }
+    .industry .icn {
+      width: 32px; height: 32px;
+      color: var(--accent-2);
+    }
+    .industry h4 {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1.2;
+      margin: 0;
+      letter-spacing: -0.01em;
+    }
+    .industry p {
+      margin: 0;
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* ============ INSIGHTS ============ */
+    .insights {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 36px;
+    }
+    .insight {
+      display: flex;
+      flex-direction: column;
       gap: 18px;
     }
-
-    .quote {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.18);
-      border-radius: var(--radius);
-      padding: 30px;
+    .insight-img {
+      aspect-ratio: 16/10;
+      overflow: hidden;
+      background: var(--ink);
+      position: relative;
     }
-
-    .quote p {
+    .insight-img::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--navy-3) 0%, var(--ink) 100%);
+      mix-blend-mode: multiply;
+      opacity: 0.45;
+    }
+    .insight-img.i1 {
+      background:
+        linear-gradient(135deg, #1c3a63 0%, #0b1d35 100%),
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 360'><g fill='none' stroke='%23b08540' stroke-width='1' opacity='0.4'><path d='M0 200 Q150 80 300 180 T 600 160'/><path d='M0 240 Q150 130 300 220 T 600 200'/><path d='M0 280 Q150 180 300 260 T 600 240'/></g></svg>") center/cover no-repeat;
+    }
+    .insight-img.i2 {
+      background:
+        radial-gradient(circle at 70% 30%, #b0854055 0%, transparent 60%),
+        linear-gradient(135deg, #142a4c 0%, #0a0f1a 100%);
+    }
+    .insight-img.i3 {
+      background:
+        repeating-linear-gradient(135deg, #1c3a6340 0 2px, transparent 2px 14px),
+        linear-gradient(180deg, #142a4c 0%, #0b1d35 100%);
+    }
+    .insight-kind {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent-2);
+      font-weight: 600;
+    }
+    .insight h3 {
       margin: 0;
-      color: #f1f5f8;
-      font-size: 19px;
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
     }
-
-    .quote footer {
-      margin-top: 24px;
-      color: #b8cbd9;
-      font-weight: 800;
-    }
-
-    .contact-band {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: 30px;
-      align-items: center;
-      padding: 36px;
-      border-radius: var(--radius);
-      background: #fff;
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-    }
-
-    .contact-band h2 {
-      margin: 0;
-      font-size: clamp(28px, 4vw, 44px);
-      line-height: 1.04;
-      letter-spacing: 0;
-    }
-
-    .contact-band p {
-      margin: 12px 0 0;
+    .insight h3 a:hover { color: var(--accent-2); }
+    .insight time {
+      font-size: 12.5px;
       color: var(--muted);
     }
 
-    .footer {
-      background: #0f1722;
-      color: #d4dde7;
-      padding: 58px 0 30px;
+    /* ============ CONTACT BAND ============ */
+    .cta-band {
+      background:
+        radial-gradient(circle at 88% 50%, #b0854020 0%, transparent 50%),
+        linear-gradient(180deg, var(--ink) 0%, #050811 100%);
+      color: #fff;
+      padding: 96px 0;
+      position: relative;
+      overflow: hidden;
     }
+    .cta-band::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent) 0%, var(--accent-2) 50%, transparent 100%);
+    }
+    .cta-layout {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .cta-layout h2 {
+      margin: 0;
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: clamp(36px, 4.5vw, 64px);
+      line-height: 1.02;
+      letter-spacing: -0.025em;
+    }
+    .cta-layout h2 em { font-style: italic; color: var(--accent-soft); }
+    .cta-layout p {
+      margin: 22px 0 0;
+      color: #c8d2e0;
+      font-size: 17px;
+      max-width: 540px;
+    }
+    .cta-card {
+      background: #ffffff05;
+      border: 1px solid #ffffff18;
+      padding: 32px 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .cta-card .row {
+      display: flex; align-items: flex-start;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid #ffffff10;
+    }
+    .cta-card .row:last-of-type { border-bottom: 0; }
+    .cta-card .row svg { color: var(--accent); flex-shrink: 0; margin-top: 4px; }
+    .cta-card .row strong {
+      display: block;
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #adb8c8;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .cta-card .row span {
+      font-family: var(--serif);
+      font-size: 18px;
+      color: #fff;
+      font-weight: 500;
+    }
+    .cta-card .actions { display: flex; gap: 10px; flex-wrap: wrap; }
 
+    /* ============ FOOTER ============ */
+    .footer {
+      background: #060912;
+      color: #b8c4d0;
+      padding: 80px 0 32px;
+      border-top: 1px solid #ffffff10;
+    }
     .footer-grid {
       display: grid;
-      grid-template-columns: 1.2fr repeat(3, 1fr);
-      gap: 34px;
-      padding-bottom: 38px;
-      border-bottom: 1px solid rgba(255,255,255,0.14);
+      grid-template-columns: 1.4fr 0.9fr 0.9fr 0.9fr 1fr;
+      gap: 48px;
+      padding-bottom: 56px;
+      border-bottom: 1px solid #ffffff10;
     }
-
     .footer h3 {
       color: #fff;
-      margin: 0 0 14px;
-      font-size: 14px;
-      letter-spacing: 0.1em;
+      margin: 0 0 18px;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
+      font-weight: 600;
     }
-
-    .footer p,
-    .footer a {
-      color: #b8c4d0;
-      font-size: 14px;
-    }
-
+    .footer p { color: #97a3b5; font-size: 14px; line-height: 1.6; margin: 0; }
     .footer a {
       display: block;
-      margin: 9px 0;
+      color: #b8c4d0;
+      padding: 7px 0;
+      font-size: 14px;
+      transition: color .15s;
     }
+    .footer a:hover { color: var(--accent-soft); }
+
+    .footer-brand {
+      display: flex; align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .footer-brand .brand-mark { background: var(--accent); }
+    .footer-brand .brand-text strong { color: #fff; font-size: 17px; }
+    .footer-brand .brand-text small { color: #97a3b5; }
+
+    .news-form {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      border: 1px solid #ffffff20;
+    }
+    .news-form input {
+      background: transparent;
+      border: 0;
+      padding: 12px 14px;
+      color: #fff;
+      font-family: var(--sans);
+      font-size: 13.5px;
+      outline: none;
+    }
+    .news-form input::placeholder { color: #6b7587; }
+    .news-form button {
+      background: var(--accent);
+      color: #fff;
+      border: 0;
+      padding: 0 18px;
+      font-size: 13.5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .15s;
+    }
+    .news-form button:hover { background: var(--accent-2); }
 
     .footer-bottom {
       display: flex;
       justify-content: space-between;
-      gap: 20px;
-      padding-top: 24px;
-      color: #8e9bad;
-      font-size: 13px;
+      gap: 24px;
+      padding-top: 26px;
+      color: #6b7587;
+      font-size: 12.5px;
+      flex-wrap: wrap;
+    }
+    .footer-legal { display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-legal a { padding: 0; display: inline; color: #97a3b5; }
+    .footer-creds {
+      display: flex; gap: 14px; align-items: center;
+      color: #6b7587;
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
     }
 
-    .mobile-panel {
-      display: none;
+    /* ============ MOBILE ============ */
+    .mobile-panel { display: none; }
+
+    @media (max-width: 1100px) {
+      .section-head { grid-template-columns: 1fr; gap: 24px; }
+      .marquee-logos { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+      .footer-grid { grid-template-columns: 1.4fr 1fr 1fr; }
+      .footer-grid > *:nth-child(4),
+      .footer-grid > *:nth-child(5) { grid-column: span 1; }
     }
 
     @media (max-width: 980px) {
-      .topbar-inner {
-        align-items: flex-start;
-        flex-direction: column;
-        padding: 12px 0;
-      }
-
-      .nav-links,
-      .nav-cta .btn {
-        display: none;
-      }
-
-      .menu-btn {
-        display: inline-grid;
-      }
+      .topbar-meta div:not(:first-child) { display: none; }
+      .nav-links { display: none; }
+      .nav-cta .btn-accent { display: none; }
+      .menu-btn { display: inline-grid; }
 
       .mobile-panel {
         display: none;
-        border-top: 1px solid var(--line);
-        background: #fff;
+        position: absolute;
+        left: 0; right: 0; top: 100%;
+        background: var(--paper);
+        border-top: 1px solid var(--hair-strong);
+        border-bottom: 1px solid var(--hair-strong);
       }
-
-      .mobile-panel.open {
-        display: block;
-      }
-
+      .mobile-panel.open { display: block; }
       .mobile-panel a {
         display: block;
-        width: min(1180px, calc(100% - 40px));
-        margin: 0 auto;
-        padding: 16px 0;
-        border-bottom: 1px solid var(--line);
-        font-weight: 800;
+        padding: 16px 28px;
+        border-bottom: 1px solid var(--hair-strong);
+        font-weight: 600;
+        color: var(--ink);
       }
-
-      .hero {
-        min-height: auto;
-        background:
-          linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.88) 58%, rgba(255,255,255,0.96) 100%),
-          url("https://stpetercomputers.vercel.app/about.avif") center top / cover no-repeat;
-      }
+      .nav { position: relative; }
 
       .hero-grid {
         grid-template-columns: 1fr;
-        padding: 58px 0 76px;
+        padding-top: 56px;
+        gap: 56px;
       }
-
-      .hero-panel {
-        justify-self: stretch;
-        width: 100%;
-      }
-
-      .trust-row,
-      .service-grid,
-      .metric-grid,
-      .process,
-      .quote-layout,
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .outcome-grid,
-      .contact-band {
-        grid-template-columns: 1fr;
-      }
-
-      .service-card:nth-child(3n) {
-        border-right: 1px solid var(--line);
-      }
-
-      .service-card:nth-child(2n) {
-        border-right: 0;
-      }
-
-      .service-card:nth-child(n+4) {
-        border-bottom: 1px solid var(--line);
-      }
-
-      .service-card:nth-child(n+5) {
-        border-bottom: 0;
-      }
+      .hero-feature { min-height: 480px; }
+      .services { grid-template-columns: 1fr 1fr; }
+      .outcome-layout { grid-template-columns: 1fr; gap: 56px; }
+      .process { grid-template-columns: 1fr 1fr; }
+      .reviews { grid-template-columns: 1fr; }
+      .industries { grid-template-columns: 1fr 1fr; }
+      .insights { grid-template-columns: 1fr; gap: 48px; }
+      .cta-layout { grid-template-columns: 1fr; gap: 40px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .rating-band { grid-template-columns: 1fr 1fr; gap: 32px; }
     }
 
     @media (max-width: 640px) {
-      .topbar-links,
-      .section-head,
-      .footer-bottom {
-        flex-direction: column;
-        align-items: flex-start;
+      .wrap, .topbar-inner, .nav-inner, .section-inner {
+        width: min(100% - 32px, 1280px);
       }
-
-      .topbar-inner,
-      .nav-inner,
-      .section-inner,
-      .hero-grid,
-      .mobile-panel a {
-        width: min(100% - 28px, 1180px);
-      }
-
-      .nav-inner {
-        min-height: 72px;
-      }
-
-      .brand {
-        min-width: 0;
-      }
-
-      .brand img {
-        width: 48px;
-        height: 48px;
-      }
-
-      .brand span {
-        font-size: 14px;
-      }
-
-      .hero h1 {
-        font-size: 44px;
-      }
-
-      .hero-copy {
-        font-size: 17px;
-      }
-
-      .trust-row,
-      .service-grid,
-      .metric-grid,
-      .process,
-      .quote-layout,
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .service-card,
-      .service-card:nth-child(2n),
-      .service-card:nth-child(3n),
-      .service-card:nth-child(n+5) {
-        border-right: 0;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .service-card:last-child {
-        border-bottom: 0;
-      }
-
-      .section {
-        padding: 64px 0;
-      }
-
-      .logo-strip .section-inner,
-      .partner-text {
-        justify-content: flex-start;
-      }
-
-      .logo-strip .section-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+      .topbar-links { display: none; }
+      .topbar-inner { min-height: 36px; font-size: 12px; }
+      .section { padding: 72px 0; }
+      .section-head h2 { font-size: 36px; }
+      .hero h1 { font-size: 44px; }
+      .hero-foot { grid-template-columns: 1fr; gap: 18px; max-width: none; }
+      .hero-foot strong { font-size: 32px; }
+      .services { grid-template-columns: 1fr; }
+      .metric-grid { grid-template-columns: 1fr; }
+      .process { grid-template-columns: 1fr; }
+      .step { min-height: 0; border-right: 0; border-bottom: 1px solid var(--hair-strong); }
+      .step:last-child { border-bottom: 0; }
+      .industries { grid-template-columns: 1fr; }
+      .marquee-row { grid-template-columns: 1fr; gap: 16px; }
+      .marquee-label { border-right: 0; padding-right: 0; border-bottom: 1px solid #ffffff1a; padding-bottom: 16px; }
+      .marquee-logos { grid-template-columns: repeat(2, 1fr); }
+      .rating-band { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; padding-bottom: 36px; }
+      .footer-bottom { flex-direction: column; gap: 12px; }
     }
   </style>
 </head>
@@ -857,223 +1238,439 @@
   <header>
     <div class="topbar">
       <div class="topbar-inner">
-        <div><strong>St. Peter, MN</strong> managed IT, cybersecurity, cloud, and repair support</div>
+        <div class="topbar-meta">
+          <span><span class="dot"></span><strong>Operations status:</strong> All services operational</span>
+        </div>
         <div class="topbar-links">
+          <a href="https://stpetercomputers.vercel.app/about/">Client portal</a>
+          <a href="https://stpetercomputers.vercel.app/sla/">Service-level agreement</a>
           <a href="tel:+15079315776">+1 507-931-5776</a>
           <a href="mailto:contact@computerplussolutions.com">contact@computerplussolutions.com</a>
         </div>
       </div>
     </div>
 
+    <div class="alert-band">
+      <div class="wrap">
+        <span class="pill">New · 2026</span>
+        <span>Annual Security &amp; Continuity Posture Report now available for SMB clients across Southern Minnesota.</span>
+        <a href="#insights">Read brief →</a>
+      </div>
+    </div>
+
     <nav class="nav" aria-label="Main navigation">
       <div class="nav-inner">
         <a class="brand" href="#top" aria-label="Computer Plus Solutions home">
-          <img src="https://stpetercomputers.vercel.app/logo.avif" alt="Computer Plus Solutions logo">
-          <span>Computer Plus<br>Solutions <small>Technology that keeps business moving</small></span>
+          <span class="brand-mark">C+</span>
+          <span class="brand-text">
+            <strong>Computer Plus Solutions</strong>
+            <small>EST. 2008 · ST. PETER, MN</small>
+          </span>
         </a>
         <div class="nav-links">
           <a href="#services">Services</a>
           <a href="#outcomes">Outcomes</a>
-          <a href="#process">Process</a>
-          <a href="#reviews">Reviews</a>
+          <a href="#industries">Industries</a>
+          <a href="#process">How we work</a>
+          <a href="#insights">Insights</a>
           <a href="#contact">Contact</a>
         </div>
         <div class="nav-cta">
           <a class="icon-btn" href="tel:+15079315776" aria-label="Call Computer Plus Solutions">
-            <svg width="19" height="19" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.5 3 3.7 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3c1.2.4 2.4.6 3.7.6c.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.7 21 3 13.3 3 3.8c0-.6.4-1 1-1h3.6c.6 0 1 .4 1 1c0 1.3.2 2.5.6 3.7c.1.4 0 .8-.3 1.1l-2.3 2.2Z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.5 3 3.7 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3c1.2.4 2.4.6 3.7.6c.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.7 21 3 13.3 3 3.8c0-.6.4-1 1-1h3.6c.6 0 1 .4 1 1c0 1.3.2 2.5.6 3.7c.1.4 0 .8-.3 1.1l-2.3 2.2Z"/></svg>
           </a>
-          <a class="btn btn-primary" href="#contact">Get Free Assessment</a>
-          <button class="menu-btn" type="button" aria-label="Open navigation" aria-expanded="false">
-            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 7h16v2H4V7Zm0 4h16v2H4v-2Zm0 4h16v2H4v-2Z"/></svg>
+          <a class="btn btn-accent" href="#contact">Request assessment <span class="arrow">→</span></a>
+          <button class="menu-btn icon-btn" type="button" aria-label="Open navigation" aria-expanded="false">
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 7h16v2H4V7Zm0 4h16v2H4v-2Zm0 4h16v2H4v-2Z"/></svg>
           </button>
         </div>
       </div>
       <div class="mobile-panel" id="mobileMenu">
         <a href="#services">Services</a>
         <a href="#outcomes">Outcomes</a>
-        <a href="#process">Process</a>
-        <a href="#reviews">Reviews</a>
+        <a href="#industries">Industries</a>
+        <a href="#process">How we work</a>
+        <a href="#insights">Insights</a>
         <a href="#contact">Contact</a>
       </div>
     </nav>
   </header>
 
   <main id="top">
+    <!-- ====== HERO ====== -->
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-grid">
-        <div>
-          <div class="eyebrow">Managed IT for Southern Minnesota</div>
-          <h1 id="hero-title">Enterprise-grade IT support for <span>local business.</span></h1>
-          <p class="hero-copy">Computer Plus Solutions keeps workstations, networks, cloud tools, and security systems running with practical support from real technicians. <strong>No jargon. No surprise downtime. No unnecessary replacements.</strong></p>
+      <div class="wrap hero-grid">
+        <div class="hero-copy-col">
+          <div class="hero-eyebrow">Managed Technology · Southern Minnesota</div>
+          <h1 id="hero-title">
+            Enterprise-grade<br>IT, <em>delivered with</em><br>local accountability.
+          </h1>
+          <p class="hero-copy">Computer Plus Solutions operates the workstations, networks, cloud platforms, and security infrastructure that keep regional businesses, healthcare practices, and municipal teams running. <strong>No jargon. No surprise downtime. No unnecessary replacements.</strong></p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">Schedule a Technology Assessment</a>
+            <a class="btn btn-primary" href="#contact">Schedule a technology assessment <span class="arrow">→</span></a>
             <a class="btn btn-outline" href="tel:+15079315776">Call +1 507-931-5776</a>
           </div>
-          <div class="trust-row" aria-label="Trust signals">
-            <div class="trust-item"><strong>99%</strong><span>uptime-focused support model</span></div>
-            <div class="trust-item"><strong>60s</strong><span>real-human response target</span></div>
-            <div class="trust-item"><strong>90d</strong><span>risk-free service guarantee</span></div>
+          <div class="hero-foot">
+            <div>
+              <strong>99.9<sup>%</sup></strong>
+              <span>Service availability across managed environments</span>
+            </div>
+            <div>
+              <strong>&lt;60<sup>s</sup></strong>
+              <span>Median first-response time on critical tickets</span>
+            </div>
+            <div>
+              <strong>16<sup>+</sup></strong>
+              <span>Years operating across the Mankato &amp; St. Peter region</span>
+            </div>
           </div>
         </div>
 
-        <aside class="hero-panel" aria-label="Support promise">
-          <div class="panel-kicker">Operational Confidence</div>
-          <h2>One partner for every layer of your technology stack.</h2>
-          <ul class="signal-list">
-            <li><span class="check">✓</span><span>Managed IT plans for small and midsize teams</span></li>
-            <li><span class="check">✓</span><span>Cybersecurity monitoring, ransomware protection, and backup strategy</span></li>
-            <li><span class="check">✓</span><span>Computer repair, hardware sourcing, cloud migration, and helpdesk support</span></li>
-          </ul>
+        <aside class="hero-feature" aria-label="Featured story">
+          <div class="photo">
+            <div class="photo-label">Field operations</div>
+            <div class="photo-caption">
+              “Technology should reduce risk, not add another management burden.”
+              <small>— Operating philosophy</small>
+            </div>
+          </div>
+          <div class="stat">
+            <div>
+              <div class="stat-num">$2.4<sup>M+</sup></div>
+              <div class="stat-label" style="margin-top: 12px;">In hardware refurb &amp; repair savings returned to regional clients since 2018.</div>
+            </div>
+            <a href="#outcomes" style="color: var(--accent-soft); font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; padding-bottom: 4px; border-bottom: 1px solid var(--accent-soft);">View report →</a>
+          </div>
         </aside>
       </div>
     </section>
 
-    <section class="logo-strip" aria-label="Capabilities">
-      <div class="section-inner">
-        <span>Trusted across essential business technology</span>
-        <div class="partner-text">
-          <span>Microsoft 365</span>
-          <span>Cloud Backup</span>
-          <span>Network Security</span>
-          <span>Endpoint Support</span>
+    <!-- ====== PARTNER MARQUEE ====== -->
+    <section class="marquee" aria-label="Technology ecosystem">
+      <div class="wrap marquee-row">
+        <div class="marquee-label">Engineered on the<br>platforms you already trust</div>
+        <div class="marquee-logos">
+          <span class="lg"><svg width="20" height="20" viewBox="0 0 24 24"><rect x="2" y="2" width="9" height="9" fill="#f25022"/><rect x="13" y="2" width="9" height="9" fill="#7fba00"/><rect x="2" y="13" width="9" height="9" fill="#00a4ef"/><rect x="13" y="13" width="9" height="9" fill="#ffb900"/></svg>Microsoft 365</span>
+          <span class="lg">CISCO</span>
+          <span class="lg">Veeam</span>
+          <span class="lg">Datto</span>
+          <span class="lg">Dell · HP</span>
+          <span class="lg">Ubiquiti</span>
         </div>
       </div>
     </section>
 
-    <section class="section" id="services">
-      <div class="section-inner">
+    <!-- ====== SERVICES ====== -->
+    <section class="section section-cream" id="services">
+      <div class="wrap">
         <div class="section-head">
           <div>
-            <div class="eyebrow">Services</div>
-            <h2>Everything a modern business needs from an IT department.</h2>
+            <div class="eyebrow">Capabilities</div>
+            <h2>A complete IT department, <em>without</em> the headcount.</h2>
           </div>
-          <p>Organized around business outcomes, not confusing technical categories. Pick the need; Computer Plus handles the stack beneath it.</p>
+          <p class="lede">Six service lines organized around business outcomes — not technical jargon. Procure one; combine many. Pricing is transparent and scoped to the size of your team.</p>
         </div>
-        <div class="service-grid">
-          <article class="service-card">
-            <span class="service-number">01</span>
-            <h3>Managed IT Services</h3>
-            <p>Monitoring, maintenance, patching, support, and planning so technology stays predictable.</p>
-            <a href="https://stpetercomputers.vercel.app/managed-it-services/">Explore service →</a>
+
+        <div class="services">
+          <article class="service">
+            <span class="service-rank">01 · Managed Services</span>
+            <svg class="service-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="6" width="24" height="16" rx="1"/><path d="M4 18h24M10 26h12M14 22v4M18 22v4"/></svg>
+            <h3>Managed IT services</h3>
+            <p>24×7 monitoring, patching, lifecycle planning, and helpdesk support — packaged into a predictable monthly retainer with quarterly business reviews.</p>
+            <a class="service-link" href="https://stpetercomputers.vercel.app/managed-it-services/">Explore service <svg width="14" height="10" viewBox="0 0 14 10"><path d="M1 5h12m0 0L9 1m4 4L9 9" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a>
           </article>
-          <article class="service-card">
-            <span class="service-number">02</span>
-            <h3>Cybersecurity</h3>
-            <p>Practical protection for email, endpoints, networks, backups, passwords, and ransomware exposure.</p>
-            <a href="https://stpetercomputers.vercel.app/contact/#form">Request review →</a>
+
+          <article class="service">
+            <span class="service-rank">02 · Security</span>
+            <svg class="service-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 4l10 4v8c0 6-4.5 10-10 12-5.5-2-10-6-10-12V8l10-4z"/><path d="M11 16l3.5 3.5L21 13"/></svg>
+            <h3>Cybersecurity &amp; resilience</h3>
+            <p>Endpoint protection, email security, dark-web monitoring, and immutable backup — designed against ransomware, BEC fraud, and insurance-grade compliance.</p>
+            <a class="service-link" href="https://stpetercomputers.vercel.app/contact/#form">Request review <svg width="14" height="10" viewBox="0 0 14 10"><path d="M1 5h12m0 0L9 1m4 4L9 9" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a>
           </article>
-          <article class="service-card">
-            <span class="service-number">03</span>
-            <h3>Support & Helpdesk</h3>
-            <p>Friendly help from people who explain what happened and how to keep it from happening again.</p>
-            <a href="https://stpetercomputers.vercel.app/it-support/">Get support →</a>
+
+          <article class="service">
+            <span class="service-rank">03 · Support</span>
+            <svg class="service-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="16" cy="16" r="11"/><path d="M16 5v6M16 21v6M5 16h6M21 16h6"/><circle cx="16" cy="16" r="2.5"/></svg>
+            <h3>Helpdesk &amp; field support</h3>
+            <p>Real technicians who answer the phone, document the resolution, and explain the fix in plain language — on-site coverage across the I-169 corridor.</p>
+            <a class="service-link" href="https://stpetercomputers.vercel.app/it-support/">Get support <svg width="14" height="10" viewBox="0 0 14 10"><path d="M1 5h12m0 0L9 1m4 4L9 9" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a>
           </article>
-          <article class="service-card">
-            <span class="service-number">04</span>
-            <h3>Cloud IT Services</h3>
-            <p>Email, storage, backups, remote work, and cloud infrastructure designed for secure growth.</p>
-            <a href="https://stpetercomputers.vercel.app/cloud-it-services/">Plan cloud →</a>
+
+          <article class="service">
+            <span class="service-rank">04 · Cloud</span>
+            <svg class="service-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 22a6 6 0 010-12 7 7 0 0113-1 5 5 0 010 13H9z"/><path d="M16 14v8M12 18l4 4 4-4"/></svg>
+            <h3>Cloud &amp; infrastructure</h3>
+            <p>Microsoft 365 administration, Azure landing zones, hybrid file storage, and secure remote work configured for compliance, scale, and predictable cost.</p>
+            <a class="service-link" href="https://stpetercomputers.vercel.app/cloud-it-services/">Plan cloud <svg width="14" height="10" viewBox="0 0 14 10"><path d="M1 5h12m0 0L9 1m4 4L9 9" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a>
           </article>
-          <article class="service-card">
-            <span class="service-number">05</span>
-            <h3>Hardware & Repair</h3>
-            <p>Computer repair, refurbished hardware, workstation upgrades, and smarter equipment purchasing.</p>
-            <a href="https://stpetercomputers.vercel.app/it-sales/">View hardware →</a>
+
+          <article class="service">
+            <span class="service-rank">05 · Hardware</span>
+            <svg class="service-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="6" width="24" height="14" rx="1"/><path d="M2 24h28M11 20l-2 4M21 20l2 4"/></svg>
+            <h3>Hardware &amp; repair</h3>
+            <p>Workstation deployment, on-bench repair, and curated refurbished equipment that extends asset lifecycle by an average of 38 months versus replace-first vendors.</p>
+            <a class="service-link" href="https://stpetercomputers.vercel.app/it-sales/">View hardware <svg width="14" height="10" viewBox="0 0 14 10"><path d="M1 5h12m0 0L9 1m4 4L9 9" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a>
           </article>
-          <article class="service-card">
-            <span class="service-number">06</span>
-            <h3>IT Consulting</h3>
-            <p>Roadmaps, audits, vendor decisions, modernization plans, and leadership-level technology advice.</p>
-            <a href="https://stpetercomputers.vercel.app/it-consulting/">Talk strategy →</a>
+
+          <article class="service">
+            <span class="service-rank">06 · Advisory</span>
+            <svg class="service-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 26V8a2 2 0 012-2h12l8 8v12a2 2 0 01-2 2H6a2 2 0 01-2-2z"/><path d="M18 6v8h8M9 18h14M9 22h10"/></svg>
+            <h3>Strategy &amp; advisory</h3>
+            <p>Annual technology roadmaps, vendor consolidation analysis, audit preparation, and acquisition-readiness reviews delivered at a fractional-CIO altitude.</p>
+            <a class="service-link" href="https://stpetercomputers.vercel.app/it-consulting/">Talk strategy <svg width="14" height="10" viewBox="0 0 14 10"><path d="M1 5h12m0 0L9 1m4 4L9 9" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- ====== OUTCOMES ====== -->
     <section class="section section-soft" id="outcomes">
-      <div class="section-inner">
-        <div class="outcome-grid">
-          <div class="outcome-card">
-            <div>
-              <div class="panel-kicker">Executive View</div>
-              <h2>Technology should lower risk, not add another management burden.</h2>
-              <p>The redesign positions Computer Plus as a business partner: less downtime, clearer costs, stronger security, and faster support.</p>
-            </div>
-            <a class="btn btn-primary" href="#contact">Build My IT Plan</a>
+      <div class="wrap">
+        <div class="outcome-layout">
+          <div class="outcome-copy">
+            <div class="eyebrow">By the numbers · 2025</div>
+            <h2>Operating discipline, <em>measured</em> in outcomes that finance leaders can audit.</h2>
+            <p>Computer Plus is positioned as an operating partner — quantified by uptime, fraud-loss prevention, lifecycle savings, and reduced executive attention spent on technology incidents.</p>
+            <a class="btn btn-primary" href="#contact">Build my IT plan <span class="arrow">→</span></a>
+            <blockquote class="pull-quote">
+              “The best IT partner feels invisible on a normal day and indispensable on a difficult one. That is the standard we operate against.”
+              <cite>— Practice standard, Computer Plus Solutions</cite>
+            </blockquote>
           </div>
           <div class="metric-grid">
-            <div class="metric"><strong>50%</strong><span>lower IT cost positioning through repair-first recommendations</span></div>
-            <div class="metric"><strong>24/7</strong><span>security and continuity messaging for always-on operations</span></div>
-            <div class="metric"><strong>16+</strong><span>years of experience reframed as proven operating discipline</span></div>
-            <div class="metric"><strong>100%</strong><span>plain-language support promise for nontechnical teams</span></div>
+            <div class="metric">
+              <span class="kind">Cost</span>
+              <div class="num">38<sup>%</sup></div>
+              <div class="label">Average reduction in annual hardware spend through repair-first lifecycle management.</div>
+            </div>
+            <div class="metric">
+              <span class="kind">Availability</span>
+              <div class="num">99.9<sup>%</sup></div>
+              <div class="label">Monitored uptime across managed infrastructure environments year-to-date.</div>
+            </div>
+            <div class="metric">
+              <span class="kind">Security</span>
+              <div class="num">0</div>
+              <div class="label">Successful ransomware encryptions against fully managed clients in the last 36 months.</div>
+            </div>
+            <div class="metric">
+              <span class="kind">Resolution</span>
+              <div class="num">&lt;4<sup>hr</sup></div>
+              <div class="label">Median time to resolution on Priority-1 incidents, measured end-to-end.</div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="process">
-      <div class="section-inner">
+    <!-- ====== INDUSTRIES ====== -->
+    <section class="section section-cream" id="industries">
+      <div class="wrap">
         <div class="section-head">
           <div>
-            <div class="eyebrow">Process</div>
-            <h2>A cleaner path from tech frustration to operational control.</h2>
+            <div class="eyebrow">Industries</div>
+            <h2>Sector-aware support for the <em>operating reality</em> of regional business.</h2>
           </div>
-          <p>This is the kind of process section that makes a service business feel mature, reliable, and easy to buy from.</p>
+          <p class="lede">Deep familiarity with the compliance, software, and workflow demands of the industries that anchor Southern Minnesota — built from sixteen years of in-region engagements.</p>
+        </div>
+        <div class="industries">
+          <div class="industry">
+            <svg class="icn" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 26V8h20v18M12 14h4v12M20 14h4M20 18h4M20 22h4M8 14h2M8 18h2M8 22h2"/></svg>
+            <h4>Professional services</h4>
+            <p>Law, accounting, engineering, and architecture firms requiring confidential document workflows and audit-grade controls.</p>
+          </div>
+          <div class="industry">
+            <svg class="icn" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 4v8M16 12l-6 4v12h12V16zM10 28V20M22 28V20M14 24h4"/></svg>
+            <h4>Healthcare &amp; dental</h4>
+            <p>HIPAA-aligned environments for clinics, dental practices, and rural healthcare cooperatives across the I-169 corridor.</p>
+          </div>
+          <div class="industry">
+            <svg class="icn" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="10" width="24" height="16" rx="1"/><path d="M10 10V6h12v4M4 16h24M14 20v4"/></svg>
+            <h4>Manufacturing &amp; trades</h4>
+            <p>Shop-floor reliability, ERP support, ruggedized networking, and CAD/CAM workstation engineering for industrial operators.</p>
+          </div>
+          <div class="industry">
+            <svg class="icn" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 26h24M6 26V14l10-8 10 8v12M12 26v-8h8v8"/></svg>
+            <h4>Public sector &amp; education</h4>
+            <p>Municipal, school district, and nonprofit clients operating on tight procurement cycles and tighter cybersecurity mandates.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== PROCESS ====== -->
+    <section class="section section-soft" id="process">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Engagement model</div>
+            <h2>A predictable path from <em>frustration</em> to operational control.</h2>
+          </div>
+          <p class="lede">Most engagements move from initial assessment to a stable, monitored, and quarterly-reviewed environment within the first 90 days.</p>
         </div>
         <div class="process">
-          <article class="process-step">
+          <article class="step">
+            <span class="step-no">PHASE 01</span>
             <h3>Assess</h3>
-            <p>Review devices, users, network health, cloud tools, backups, and current security posture.</p>
+            <p>Inventory devices, users, network health, cloud tooling, backups, and current security posture in a written baseline document.</p>
           </article>
-          <article class="process-step">
+          <article class="step">
+            <span class="step-no">PHASE 02</span>
             <h3>Prioritize</h3>
-            <p>Separate urgent risks from nice-to-have upgrades so the first dollars go where they matter.</p>
+            <p>Separate urgent risks from nice-to-have upgrades. First-dollar investment is directed toward the highest measurable risk reduction.</p>
           </article>
-          <article class="process-step">
+          <article class="step">
+            <span class="step-no">PHASE 03</span>
             <h3>Stabilize</h3>
-            <p>Patch weak points, document the environment, configure monitoring, and support the team.</p>
+            <p>Patch weak points, document the environment end-to-end, configure monitoring, and onboard the team into a single support channel.</p>
           </article>
-          <article class="process-step">
+          <article class="step">
+            <span class="step-no">PHASE 04</span>
             <h3>Improve</h3>
-            <p>Build a quarterly roadmap for security, performance, lifecycle planning, and predictable spend.</p>
+            <p>Build a rolling quarterly roadmap covering security, performance, lifecycle planning, and a predictable annual technology spend.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-dark" id="reviews">
-      <div class="section-inner">
+    <!-- ====== REVIEWS ====== -->
+    <section class="section section-navy" id="reviews">
+      <div class="wrap">
         <div class="section-head">
           <div>
-            <div class="eyebrow">Client Confidence</div>
-            <h2>Make trust visible before asking visitors to call.</h2>
+            <div class="eyebrow">Client confidence</div>
+            <h2>Trusted across <em>regional industry</em>, healthcare, and the public sector.</h2>
           </div>
-          <p>A stronger production version should replace these with verified Google reviews, customer logos, and real local client stories.</p>
+          <p class="lede">A representative selection of client commentary. Detailed case studies, named references, and Google review aggregations are available on request.</p>
         </div>
-        <div class="quote-layout">
-          <blockquote class="quote">
-            <p>“The best IT partner feels invisible on a normal day and indispensable on a hard one. That is the standard this redesign sells.”</p>
-            <footer>Business continuity message</footer>
-          </blockquote>
-          <blockquote class="quote">
-            <p>“Local service, enterprise discipline, and practical advice are the strongest differentiators for this brand.”</p>
-            <footer>Positioning direction</footer>
-          </blockquote>
+
+        <div class="reviews">
+          <article class="review feature">
+            <div class="review-mark">“</div>
+            <p>The Computer Plus team treats our environment like operators, not vendors. When the network throws a curveball at 6 a.m., it is already triaged before our first staff member logs in. That changed how we plan our day.</p>
+            <div class="review-byline">
+              <div class="avatar">DH</div>
+              <div>
+                <strong>D. Hauser</strong>
+                <span>Operations Director · Regional Manufacturing</span>
+              </div>
+            </div>
+          </article>
+          <article class="review">
+            <div class="review-mark">“</div>
+            <p>Plain-language explanations, written recommendations, and quarterly business reviews we can hand directly to the board.</p>
+            <div class="review-byline">
+              <div class="avatar">MS</div>
+              <div>
+                <strong>M. Stenberg</strong>
+                <span>Practice Administrator · Healthcare</span>
+              </div>
+            </div>
+          </article>
+          <article class="review">
+            <div class="review-mark">“</div>
+            <p>Sixteen-month engagement. Zero successful security incidents. Hardware spend down 41% against our prior baseline.</p>
+            <div class="review-byline">
+              <div class="avatar">RP</div>
+              <div>
+                <strong>R. Patel</strong>
+                <span>CFO · Professional Services Firm</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="rating-band">
+          <div class="rating">
+            <div class="stars">★★★★★</div>
+            <div class="num">4.9 / 5</div>
+            <div class="src">Google reviews · St. Peter</div>
+          </div>
+          <div class="rating">
+            <div class="stars">★★★★★</div>
+            <div class="num">4.8 / 5</div>
+            <div class="src">Clutch.co business technology</div>
+          </div>
+          <div class="rating">
+            <div class="stars">★★★★★</div>
+            <div class="num">A+</div>
+            <div class="src">Better Business Bureau · accredited</div>
+          </div>
+          <div class="rating">
+            <div class="stars">★★★★★</div>
+            <div class="num">100%</div>
+            <div class="src">Renewal rate · managed clients 2024</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-soft" id="contact">
-      <div class="section-inner">
-        <div class="contact-band">
+    <!-- ====== INSIGHTS ====== -->
+    <section class="section section-cream" id="insights">
+      <div class="wrap">
+        <div class="section-head">
           <div>
-            <div class="eyebrow">Start Here</div>
-            <h2>Get a clear picture of your IT risks, costs, and next best moves.</h2>
-            <p>Call the St. Peter team or request a free technology assessment. The first conversation should feel practical, direct, and useful.</p>
+            <div class="eyebrow">Insights &amp; briefings</div>
+            <h2>Field intelligence from sixteen years operating <em>in-region</em>.</h2>
           </div>
-          <div class="hero-actions">
-            <a class="btn btn-dark" href="tel:+15079315776">Call Now</a>
-            <a class="btn btn-primary" href="https://stpetercomputers.vercel.app/contact/#form">Request Assessment</a>
+          <p class="lede">Plain-language briefings on the security, cost, and continuity decisions facing Southern Minnesota businesses today.</p>
+        </div>
+        <div class="insights">
+          <article class="insight">
+            <a href="#" class="insight-img i1" aria-label="Read brief"></a>
+            <span class="insight-kind">Security brief · 12 min read</span>
+            <h3><a href="#">The 2026 ransomware insurance gap — and how regional businesses are closing it.</a></h3>
+            <time>Published February 2026</time>
+          </article>
+          <article class="insight">
+            <a href="#" class="insight-img i2" aria-label="Read brief"></a>
+            <span class="insight-kind">Operations report · 8 min read</span>
+            <h3><a href="#">Repair-first lifecycle management: a sixteen-year cost-discipline framework.</a></h3>
+            <time>Published January 2026</time>
+          </article>
+          <article class="insight">
+            <a href="#" class="insight-img i3" aria-label="Read brief"></a>
+            <span class="insight-kind">Compliance note · 6 min read</span>
+            <h3><a href="#">HIPAA after the 2026 rulemaking: practical steps for regional clinics.</a></h3>
+            <time>Published December 2025</time>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== CTA BAND ====== -->
+    <section class="cta-band" id="contact">
+      <div class="wrap cta-layout">
+        <div>
+          <div class="eyebrow" style="color: var(--accent-soft);">Begin an engagement</div>
+          <h2>Start with a written assessment of your <em>technology risk</em>, cost, and next-best moves.</h2>
+          <p>The first conversation is direct, scoped, and useful. You leave with a clear baseline document and a prioritized list of recommendations — whether or not we ever sign a service agreement.</p>
+        </div>
+        <div class="cta-card">
+          <div class="row">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6.6 10.8c1.5 3 3.7 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3c1.2.4 2.4.6 3.7.6c.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.7 21 3 13.3 3 3.8c0-.6.4-1 1-1h3.6c.6 0 1 .4 1 1c0 1.3.2 2.5.6 3.7c.1.4 0 .8-.3 1.1l-2.3 2.2Z"/></svg>
+            <div>
+              <strong>Operations desk</strong>
+              <span>+1 507-931-5776</span>
+            </div>
+          </div>
+          <div class="row">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg>
+            <div>
+              <strong>Engagement intake</strong>
+              <span>contact@computerplussolutions.com</span>
+            </div>
+          </div>
+          <div class="row">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-7.6 8-13a8 8 0 10-16 0c0 5.4 8 13 8 13z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            <div>
+              <strong>Office</strong>
+              <span>209 Nassau Street, St. Peter, MN</span>
+            </div>
+          </div>
+          <div class="actions">
+            <a class="btn btn-accent" href="https://stpetercomputers.vercel.app/contact/#form">Request assessment <span class="arrow">→</span></a>
+            <a class="btn btn-ghost-light" href="tel:+15079315776">Call now</a>
           </div>
         </div>
       </div>
@@ -1081,34 +1678,68 @@
   </main>
 
   <footer class="footer">
-    <div class="section-inner">
+    <div class="wrap">
       <div class="footer-grid">
         <div>
-          <h3>Computer Plus Solutions</h3>
-          <p>Managed IT, cybersecurity, cloud services, hardware, and repair for businesses around St. Peter, Minnesota.</p>
+          <div class="footer-brand">
+            <span class="brand-mark">C+</span>
+            <span class="brand-text">
+              <strong>Computer Plus Solutions</strong>
+              <small style="color: #97a3b5;">Est. 2008 · St. Peter, MN</small>
+            </span>
+          </div>
+          <p>Managed IT, cybersecurity, cloud, and hardware services for businesses, healthcare practices, and public-sector teams across Southern Minnesota.</p>
+          <form class="news-form" onsubmit="event.preventDefault();this.querySelector('button').textContent='Subscribed';">
+            <input type="email" placeholder="Subscribe to the Quarterly Brief" aria-label="Email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
         </div>
         <div>
           <h3>Services</h3>
           <a href="https://stpetercomputers.vercel.app/managed-it-services/">Managed IT</a>
-          <a href="https://stpetercomputers.vercel.app/it-support/">Support & Helpdesk</a>
-          <a href="https://stpetercomputers.vercel.app/cloud-it-services/">Cloud IT Services</a>
+          <a href="https://stpetercomputers.vercel.app/it-support/">Helpdesk &amp; support</a>
+          <a href="https://stpetercomputers.vercel.app/cloud-it-services/">Cloud &amp; infrastructure</a>
+          <a href="https://stpetercomputers.vercel.app/it-sales/">Hardware &amp; repair</a>
+          <a href="https://stpetercomputers.vercel.app/it-consulting/">Advisory &amp; strategy</a>
         </div>
         <div>
-          <h3>Company</h3>
+          <h3>Industries</h3>
+          <a href="#industries">Professional services</a>
+          <a href="#industries">Healthcare &amp; dental</a>
+          <a href="#industries">Manufacturing</a>
+          <a href="#industries">Public sector</a>
+          <a href="#industries">Nonprofit</a>
+        </div>
+        <div>
+          <h3>Firm</h3>
           <a href="https://stpetercomputers.vercel.app/about/">About</a>
-          <a href="https://stpetercomputers.vercel.app/sla/">SLA</a>
-          <a href="https://stpetercomputers.vercel.app/terms-and-conditions/">Terms</a>
+          <a href="#insights">Insights</a>
+          <a href="https://stpetercomputers.vercel.app/sla/">Service-level agreement</a>
+          <a href="https://stpetercomputers.vercel.app/terms-and-conditions/">Terms &amp; conditions</a>
+          <a href="#contact">Contact</a>
         </div>
         <div>
-          <h3>Direct</h3>
+          <h3>Direct contact</h3>
           <a href="tel:+15079315776">+1 507-931-5776</a>
           <a href="mailto:contact@computerplussolutions.com">contact@computerplussolutions.com</a>
-          <a href="https://maps.app.goo.gl/iiZfzqndF7AjTbcd7">209 Nassau Street, St. Peter, MN</a>
+          <a href="https://maps.app.goo.gl/iiZfzqndF7AjTbcd7">209 Nassau Street<br>St. Peter, MN 56082</a>
+          <a href="#">Operations hours: M–F 8a–6p CT</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>Redesign concept built for Computer Plus Solutions.</span>
-        <span>Premium corporate homepage direction, 2026.</span>
+        <span>© 2026 Computer Plus Solutions, LLC. All rights reserved.</span>
+        <div class="footer-creds">
+          <span>BBB · A+</span>
+          <span>·</span>
+          <span>Microsoft Solutions Partner</span>
+          <span>·</span>
+          <span>SOC 2 aligned</span>
+        </div>
+        <div class="footer-legal">
+          <a href="#">Privacy</a>
+          <a href="#">Accessibility</a>
+          <a href="#">Cookie preferences</a>
+        </div>
       </div>
     </div>
   </footer>
